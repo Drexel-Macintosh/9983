@@ -249,13 +249,13 @@
         */
                  		&none                                                                                	&none
 
-		            &mtt  K_CMENU TAB		 &msk LGUI LGUI		      &mkp LCLK			&mtt ESC K_BACK		 &mou RCLK MCLK
+		            &kp  TAB			 &sk GLOBE		      &mkp LCLK			&glb ESC H		 &sk LALT
 
-    &mtt LS(Q) Q	&mtt LS(W) W      &mtt LS(E) E	&mtt LS(R) R     &mtt LS(T) T	&mtt LS(Y) Y	&mtt LS(U) U	&mtt LS(I) I	&mtt LS(O) O	    &mtt LS(P) P
-    &mtt LS(A) A	&mtt LS(S) S      &mtt LS(D) D	&mtt LS(F) F     &mtt LS(G) G	&mtt LS(H) H	&mtt LS(J) J	&mtt LS(K) K	&mtt LS(L) L        &kp BSPC
-    &ALTL		&mtt LS(Z) Z      &mtt LS(X) X	&mtt LS(C) C     &mtt LS(V) V	&mtt LS(B) B	&mtt LS(N) N	&mtt LS(M) M	&mtt K_STOP LG(N)   &kp ENTER
+    &mtt LS(Q) Q	&mtt LS(W) W      &mtt LS(E) E	&mtt LS(R) R     &mtt LS(T) T	&mtt LS(Y) Y	&mtt LS(U) U	&mtt LS(I) I	&mtt LS(O) O	     &mtt LS(P) P
+    &mtt LS(A) A	&mtt LS(S) S      &mtt LS(D) D	&mtt LS(F) F     &mtt LS(G) G	&mtt LS(H) H	&mtt LS(J) J	&mtt LS(K) K	&mtt LS(L) L         &kp BSPC
+    &ALTL		&mtt LS(Z) Z      &mtt LS(X) X	&mtt LS(C) C     &mtt LS(V) V	&mtt LS(B) B	&mtt LS(N) N	&mtt LS(M) M	&glb LG(SPACE) N     &kp ENTER
 
-    		         &SHFT				 &mtt LG(A) K_PWR	      &kp SPACE			&EALT		 &sk LCTRL
+    		         &SHFT				 &mtt C_EJECT LG(LC(Q))		&kp SPACE		&ECTRL			 &sk LGUI
 
             >;
         };
@@ -264,15 +264,15 @@
         alt_layer {
 
             bindings = <        
-                		&none                                                                           	 &none
+                		&none                                                                            	 &none
 
-    	         	&kp K_SCROLL_UP			&mtt K_PREV K_VOL_DN	        &hm2 EP_TOG K_PP		&mtt K_NEXT K_VOL_UP	&kp K_SCROLL_DOWN
+    	         	&kp PG_DN    			 &mtt C_PREV C_VOL_DN		      &kp C_PP			&mtt C_NEXT C_VOL_UP	 &kp PG_UP
 
     &mtt TILDE HASH	   	&mtt HOME N1	   &mtt UP	N2	   &mtt PG_UP   N3	   &mtt LBKT LPAR	&mtt RBKT RPAR	   &mtt LT UNDER     &mtt GT MINUS	 &mtt CARET PLUS	&mtt PERCENT AT
     &mtt EQUAL STAR		&mtt LEFT N4	   &mtt DOWN	N5	   &mtt RIGHT	N6	   &mtt BSLH SLASH	&mtt PIPE COLON	   &mtt AMPS SEMI    &mtt APOS APOS	 &mtt DQT DQT     	&mtt DEL BSPC
-    &MAN	      	     	&mtt END N7	   &mtt DOWN	N8	   &mtt PG_DN	N9	   &mtt LBRC QMARK	&mtt RBRC EXCL	   &mtt GRAVE COMMA  &mtt DOT DOT	 &mtt PSCRN DLLR 	&kp ENTER
+    &MAN	      	     	&mtt END N7	   &mtt DOWN	N8	   &mtt PG_DN	N9	   &mtt LBRC QMARK	&mtt RBRC EXCL	   &mtt GRAVE COMMA  &mtt DOT DOT	 &mtt DLLR DLLR 	&kp ENTER
 	
-    		         &SHFT				 &hm2 EP_TOG N0 		&kp SPACE			&EALT				 &sk LCTRL
+    		         &SHFT				 &hm2 EP_TOG N0 		      &kp SPACE			&sk LCTRL		 &sk LGUI
 
 
             >;
@@ -280,7 +280,7 @@
 
         upper_layer {
 
-            bindings = <      
+            bindings = <        
 
 		&none													&none
  
@@ -290,7 +290,7 @@
     &kp A	     	&kp S   	&kp D      	&kp F	 		&kp G		     	&kp H	      	&kp J       	&kp K       	 &kp L		&kp BSPC
     &EMU	 	&kp Z     	&kp X     	&kp C    		&kp V	     		&kp B		&kp N        	&kp M       	 &kp DLLR	&kp ENTER
 	
-    		&SHFT				 &hm2 EP_TOG N0			&kp SPACE				&EALT				&sk LCTRL
+    		&SHFT				 &hm2 EP_TOG N0			&kp SPACE				&ECTRL				&sk LGUI
             >;
         };
 
@@ -300,13 +300,14 @@
 
 		&none													&none
 
-    		&bt0            	 &bt1                 &bt BT_CLR                &bt2             &bt3
+    		&bt BT_SEL 0            	 &bt BT_SEL 1                 &bt BT_CLR                &bt BT_SEL 2             &bt BT_SEL 3
 
     &none       	&none   	&none     	&sys_reset	&ext_power EP_TOG	   &none         	&none	           &none           &none      	   &none
     &none   		&none	  	&none	 	&none     	&none	          	   &none     	 	&none	           &none	   &none      	   &none
     &CON  		&none    	&none    	&none		&bl BL_DEC       	   &bl BL_TOG   	&bl BL_INC         &none           &bootloader     &none
 
     		&to  0               		 &none	               	      &out OUT_TOG              &none                    &none
+
             >;
         };
     };
